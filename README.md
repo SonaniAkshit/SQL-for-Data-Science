@@ -1,32 +1,47 @@
-## Grocery list :
-    Bananas (4)
-    Peanut Butter (1)
-    Dark Chocolate Bars (2)
-```sql
-select * from groceries;
-```
-| id | item | quantity |
-| :--- | :--- | :--- |
-| 1 | Bananas | 4 |
-| 2 | Peanut Butter | 1 |
-| 3 | Dark Chocolate Bars | 2 |
+# 📊 SQL for Data Science
 
-```sql
-select * from groceries order by aisle;
-```
-| id | item | quantity | aisle |
-| :--- | :--- | :--- | :--- |
-| 2 | Peanut Butter | 1 | 2 |
-| 3 | Dark Chocolate Bars | 2 | 2 |
-| 5 | Cherries | 6 | 2 |
-| 6 | Chocolate syrup | 1 | 4 |
-| 1 | Bananas | 4 | 7 |
-| 4 | Ice cream | 1 | 12 |
+Welcome to **SQL for Data Science** – a beginner-friendly, hands-on repository designed to help you master SQL through practical examples and datasets commonly used in the field of data science.
 
-```sql
-select * from groceries where aisle>5 order by aisle;
+---
+
+## 🚀 What You'll Learn
+
+- ✅ Basic to advanced SQL queries
+- 🔍 Filtering, sorting, and aggregating data
+- 🧠 Grouping, joins, and subqueries
+- 🧮 Window functions and case statements
+- 📊 Data analysis techniques with SQL
+- 🏆 Real-world data science problems using SQL
+
+Whether you're just starting out or brushing up your skills, this repo is your go-to resource for learning SQL in the context of data science.
+
+---
+
+## 📂 Repository Structure
+
+```bash
+SQL-for-Data-Science/
+├── Datasets/               # Sample datasets used in examples
+├── Basic Queries/          # SELECT, WHERE, ORDER BY, LIMIT, etc.
+├── Aggregations/           # GROUP BY, COUNT, SUM, AVG, etc.
+├── Joins/                  # INNER JOIN, LEFT JOIN, RIGHT JOIN, etc.
+├── Subqueries/             # Nested and correlated subqueries
+├── Advanced SQL/           # Window functions, CASE, CTEs
+└── README.md               # Project documentation
 ```
-| id | item | quantity | aisle |
-| :--- | :--- | :--- | :--- |
-| 1 | Bananas | 4 | 7 |
-| 4 | Ice cream | 1 | 12 |
+
+### 🤝Clone & Setup
+```bash
+git clone https://github.com/SonaniAkshit/SQL-for-Data-Science.git
+cd SQL-for-Data-Science
+```
+
+## 📧 Contact
+- **Developer:** Akshit Sonani
+- **Email:** sonaniakshit684@gmail.com
+- **GitHub:** [SonaniAkshit](https://github.com/SonaniAkshit)
+
+---
+
+# 🔥 Happy Coding! 🚀
+### ⭐ Star this repository if you find it helpful!
