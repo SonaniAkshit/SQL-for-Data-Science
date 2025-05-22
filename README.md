@@ -1,4 +1,4 @@
-    1)Grocery list:
+## Grocery list :
     Bananas (4)
     Peanut Butter (1)
     Dark Chocolate Bars (2)
