@@ -1,10 +1,12 @@
-use sqldatascience;
+use
+sqldatascience;
 
 /** Grocery list:
 Bananas (4)
 Peanut Butter (1)
 Dark Chocolate Bars (2)
 **/
+-- Output of all select queries in the README.md File so, check it...
 
 create table groceries
 (
