@@ -1,4 +1,4 @@
-# 🛢️ SQL Database
+# 🗄️ SQL Database
 
 ## 📌 CREATE Database Statement
 The **CREATE DATABASE statement** is a **DDL (Data Definition Language)** statement used to create a new database in SQL. If you are creating your database on Linux or Unix, then database names are case-sensitive, even though SQL keywords are case-insensitive. If you are working on Windows then this restriction does not apply.
