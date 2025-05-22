@@ -1,1 +1,0 @@
-# GROUP BY, COUNT, SUM, AVG, etc.
