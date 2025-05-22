@@ -1,3 +1,5 @@
+# SELECT, WHERE, ORDER BY, LIMIT, etc.
+
 ## Grocery list :
     Bananas (4)
     Peanut Butter (1)
@@ -54,6 +56,17 @@ from movies;
 | 4 | Shrek 2 | 2004 |
 | 5 | The Lion King | 1994 |
 | 6 | Disney's Up | 2009 |
+
+    Limit 2
+```sql
+select * 
+from movies 
+    limit 2;
+```
+| id | name | release\_year |
+| :--- | :--- | :--- |
+| 1 | Avatar | 2009 |
+| 2 | Titanic | 1997 |
 
     Now, add a second query after the first, that retrieves only the movies that were released in the year 2000 or later, not before.
     Sort the results so that the earlier movies are listed first. You should have 2 SELECT statements after this step.

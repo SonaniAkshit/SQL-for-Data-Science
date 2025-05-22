@@ -32,6 +32,12 @@ VALUES (6, "Disney's Up", 2009);
 select *
 from movies;
 
+-- Limit 2
+
+select *
+from movies
+limit 2;
+
 /**
   Now, add a second query after the first, that retrieves only the movies that were released in the year 2000 or later, not before.
   Sort the results so that the earlier movies are listed first. You should have 2 SELECT statements after this step.
