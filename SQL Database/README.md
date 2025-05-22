@@ -45,12 +45,115 @@ use sql_for_data_science;
 
 The SQL **DROP DATABASE** statement is used to delete an existing database along with all the data such as tables, views, indexes, stored procedures, and constraints.
 
-##### Syntax
+#### Syntax
 ```sql
 DROP DATABASE DatabaseName;
 ```
 
-##### Example
+#### Example
 ```sql
 DROP DATABASE sql_for_data_science;
 ```
+
+## 📌 ALTER DATABASE...MODIFY Statement
+
+The **ALTER DATABASE...MODIFY** statement in SQL is used to rename the name of an existing database name in SQL Database Server. Please note that this command does not work in MySQL database.
+
+#### Syntax
+```sql
+ALTER DATABASE OldDatabaseName MODIFY NAME = NewDatabaseName;
+```
+#### Exmaple
+```sql
+ALTER DATABASE sql_for_data_science MODIFY NAME = sql_for_datascience; 
+```
+
+## 📌 Backup Database Statement
+
+In SQL, the BACKUP DATABASE statement is used to create database backups.
+
+#### Syntax
+```sql
+BACKUP DATABASE database_name
+TO DISK = 'filepath'
+GO
+```
+
+## 📌 Types of Backups in SQL
+
+In SQL, there are three types of database backups available. These are: 
+
+- Full Backup
+- Differential Backup
+- Transaction Log (T-log) backup
+
+### 1) SQL Full Backup
+
+A full backup is a complete backup of an SQL server database.
+
+#### Syntax
+```sql
+BACKUP DATABASE database_name
+TO medium = 'filepath'
+GO
+```
+
+### 2) SQL Differential Backup
+
+In Sql, you can also backup only the new changes by using the WITH DIFFERENTIAL command.
+
+#### Syntax
+```sql
+BACKUP DATABASE my_db
+TO medium = 'filepath'
+WITH DIFFERENTIAL;
+GO
+```
+
+### 3) Transaction Log (T-log) backup
+A transaction log backup includes all the transactions since the last transaction log backup. BACKUP LOG comnmand is used to perfom the Transaction Log backup.
+
+#### Syntax
+```sql
+BACKUP LOG database_name
+TO medium = 'filepath';
+GO
+```
+
+### 📌 Backup SQL Database
+#### Syntax
+```sql
+RESTORE DATABASE database_name
+FROM DISK = 'filepath';
+GO
+```
+#### Example
+```sql
+SQL> BACKUP DATABASE testDB
+TO DISK = 'D:\testDB.bak'
+GO
+```
+
+## 📌 Restore Database From Backup
+To restore a backup file in Database, we can use the RESTORE DATABASE command.
+
+#### Syntax
+```sql
+RESTORE DATABASE database_name
+FROM DISK = 'filepath'
+[WITH REPLACE]
+GO
+```
+#### Example
+```sql
+SQL> RESTORE DATABASE testDB
+FROM DISK = 'D:\testDB.bak'
+WITH REPLACE
+GO
+```
+
+<div align="center">
+
+# End of SQL Database Operations
+
+</div>
