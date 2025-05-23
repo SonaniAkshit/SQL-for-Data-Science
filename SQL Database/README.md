@@ -87,7 +87,7 @@ In SQL, there are three types of database backups available. These are:
 - Differential Backup
 - Transaction Log (T-log) backup
 
-### 1) SQL Full Backup
+#### 1) SQL Full Backup
 
 A full backup is a complete backup of an SQL server database.
 
@@ -98,7 +98,7 @@ TO medium = 'filepath'
 GO
 ```
 
-### 2) SQL Differential Backup
+#### 2) SQL Differential Backup
 
 In Sql, you can also backup only the new changes by using the WITH DIFFERENTIAL command.
 
@@ -110,7 +110,7 @@ WITH DIFFERENTIAL;
 GO
 ```
 
-### 3) Transaction Log (T-log) backup
+#### 3) Transaction Log (T-log) backup
 A transaction log backup includes all the transactions since the last transaction log backup. BACKUP LOG comnmand is used to perfom the Transaction Log backup.
 
 #### Syntax
