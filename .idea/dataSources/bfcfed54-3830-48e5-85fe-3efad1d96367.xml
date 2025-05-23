@@ -1171,6 +1171,9 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <CollationName>utf8_bin</CollationName>
     </schema>
     <schema id="334" parent="1" name="sql_for_data_science">
+      <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
+      <LastIntrospectionLevel>3</LastIntrospectionLevel>
+      <LastIntrospectionLocalTimestamp>2025-05-23.09:39:46</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="335" parent="1" name="test">
@@ -1188,5 +1191,85 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
     <user id="339" parent="1" name="root">
       <Host>localhost</Host>
     </user>
+    <table id="340" parent="334" name="customers">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="341" parent="334" name="new_customers">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="342" parent="334" name="salary">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <column id="343" parent="340" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="344" parent="340" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="345" parent="340" name="age">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="346" parent="340" name="address">
+      <Position>4</Position>
+      <StoredType>char(25)|0s</StoredType>
+    </column>
+    <column id="347" parent="340" name="salary">
+      <Position>5</Position>
+      <StoredType>decimal(20,2 digit)|0s</StoredType>
+    </column>
+    <index id="348" parent="340" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="349" parent="340" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="350" parent="341" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="351" parent="341" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="352" parent="341" name="age">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="353" parent="341" name="address">
+      <Position>4</Position>
+      <StoredType>char(25)|0s</StoredType>
+    </column>
+    <column id="354" parent="341" name="salary">
+      <Position>5</Position>
+      <StoredType>decimal(20,2 digit)|0s</StoredType>
+    </column>
+    <column id="355" parent="342" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="356" parent="342" name="salary">
+      <Position>2</Position>
+      <StoredType>decimal(20,2 digit)|0s</StoredType>
+    </column>
   </database-model>
 </dataSource>

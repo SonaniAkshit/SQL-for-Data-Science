@@ -34,6 +34,14 @@ Once your table is created, you can check if it has been created successfully or
 ```sql
 DESC CUSTOMERS;
 ```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| id | int\(11\) | NO |  | null |  |
+| name | varchar\(20\) | NO |  | null |  |
+| age | int\(11\) | NO |  | null |  |
+| address | char\(25\) | YES |  | null |  |
+| salary | decimal\(20,2\) | YES |  | null |  |
+
 
 ## 📌 CREATE TABLE IF NOT EXISTS
 
