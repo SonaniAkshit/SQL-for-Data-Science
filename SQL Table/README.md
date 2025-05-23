@@ -499,6 +499,13 @@ CREATE TABLE CUSTOMERS (
    SALARY DECIMAL (18, 2)
 );
 ```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| ID | int\(11\) | NO |  | null |  |
+| NAME | varchar\(20\) | NO |  | null |  |
+| AGE | int\(11\) | NO |  | null |  |
+| ADDRESS | char\(25\) | YES |  | null |  |
+| SALARY | decimal\(18,2\) | YES |  | null |  |
 
 ### 📌 UNIQUE Key Constraint
 When applied to a column, UNIQUE Key constraint ensure that a column accepts only UNIQUE values. Following is the example to create a UNIQUE Key constraint on column ID. Once this constraint is created, column ID can't be null and it will accept only UNIQUE values.
@@ -511,6 +518,13 @@ CREATE TABLE CUSTOMERS (
    SALARY DECIMAL (18, 2)
 );
 ```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| ID | int\(11\) | NO | PRI | null |  |
+| NAME | varchar\(20\) | NO |  | null |  |
+| AGE | int\(11\) | NO |  | null |  |
+| ADDRESS | char\(25\) | YES |  | null |  |
+| SALARY | decimal\(18,2\) | YES |  | null |  |
 
 ### 📌 DEFAULT Value Constraint
 When applied to a column, DEFAULT Value constraint provides a default value for a column when none is specified. Following is the example to create a DEFAULT constraint on column NAME. Once this constraint is created, column NAME will set to "Not Available" value if NAME is not set to a value.
@@ -524,6 +538,14 @@ CREATE TABLE CUSTOMERS (
    SALARY DECIMAL (18, 2)
 );
 ```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| ID | int\(11\) | NO | PRI | null |  |
+| NAME | varchar\(20\) | YES |  | Not Available |  |
+| AGE | int\(11\) | NO |  | null |  |
+| ADDRESS | char\(25\) | YES |  | null |  |
+| SALARY | decimal\(18,2\) | YES |  | null |  |
+
 
 ### 📌 PRIMARY Key Constraint
 When applied to a column, PRIMARY Key constraint ensure that a column accepts only UNIQUE value and there can be a single PRIMARY Key on a table but multiple columns can constituet a PRIMARY Key. Following is the example to create a PRIMARY Key constraint on column ID. Once this constraint is created, column ID can't be null and it will accept only unique values.
@@ -537,18 +559,34 @@ CREATE TABLE CUSTOMERS(
    PRIMARY KEY (ID)
 );
 ```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| ID | int\(11\) | NO | PRI | null |  |
+| NAME | varchar\(20\) | NO |  | null |  |
+| AGE | int\(11\) | NO |  | null |  |
+| ADDRESS | char\(25\) | YES |  | null |  |
+| SALARY | decimal\(18,2\) | YES |  | null |  |
 
 ### 📌 FOREIGN Key Constraint
 FOREIGN Key constraint maps with a column in another table and uniquely identifies a row/record in that table. Following is an example to create a foreign key constraint on column ID available in CUSTOMERS table as shown in the statement below −
 ```sql
 CREATE TABLE ORDERS (
-   ID INT NOT NULL,
-   DATE DATETIME,
-   CUSTOMER_ID INT FOREIGN KEY REFERENCES CUSTOMERS(ID),
-   AMOUNT DECIMAL,
-   PRIMARY KEY (ID)
+    ID INT NOT NULL,
+    DATE DATETIME,
+    CUSTOMER_ID INT,
+    AMOUNT DECIMAL(10, 2),
+    PRIMARY KEY (ID),
+    FOREIGN KEY (CUSTOMER_ID) REFERENCES CUSTOMERS(ID)
 );
 ```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| ID | int\(11\) | NO | PRI | null |  |
+| DATE | datetime | YES |  | null |  |
+| CUSTOMER\_ID | int\(11\) | YES | MUL | null |  |
+| AMOUNT | decimal\(10,2\) | YES |  | null |  |
+
+
 ### 📌 CHECK Value Constraint
 When applied to a column, CHECK Value constraint works like a validation and it is used to check the validity of the data entered into the particular column of the table. table and uniquely identifies a row/record in that table. Following is an example to create a CHECK validation on AGE column which will not accept if its value is below to 18.
 ```sql
