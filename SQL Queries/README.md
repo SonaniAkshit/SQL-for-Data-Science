@@ -371,3 +371,9 @@ ORDER BY ( CASE ADDRESS
    WHEN 'Hyderabad' 	THEN 5
    ELSE 100 END) ASC, ADDRESS DESC;
 ```
+
+<div align="center">
+
+# End of SQL Queries Operations
+
+</div>
