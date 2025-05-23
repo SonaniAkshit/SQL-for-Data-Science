@@ -4,7 +4,7 @@
 
 SQL provides the `CREATE TABLE` statement to create a new table in a given database. An SQL query to create a table must define the structure of a table. The structure consists of the name of a table and names of columns in the table with each column's data type. Note that each table must be uniquely named in a database.
 
-#### Syntax
+###### Syntax
 ```sql
 CREATE TABLE table_name(
    column1 datatype,
@@ -15,7 +15,7 @@ CREATE TABLE table_name(
    PRIMARY KEY( one or more columns )
 );
 ```
-#### </> Example
+###### </> Example
 ```sql
 CREATE TABLE CUSTOMERS(
     ID          INT NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE CUSTOMERS(
 ####  ✅ Verification
 Once your table is created, you can check if it has been created successfully or not. You can use SQL **`DESC table_name`** command to list down the description of the table.
 
-#### Syntax
+###### Syntax
 ```sql
 DESC CUSTOMERS;
 ```
@@ -51,7 +51,7 @@ Consider a situation where you will try to create a table which already exists, 
 
 So to avoid such error we can use SQL command `CREATE TABLE IF NOT EXISTS` to create a table.
 
-#### Syntax
+###### Syntax
 ```sql
 CREATE TABLE IF NOT EXISTS table_name(
    column1 datatype,
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS table_name(
 );
 ```
 
-#### </> Exmaple
+###### </> Exmaple
 ```sql
 CREATE TABLE IF NOT EXISTS CUSTOMERS(
     ID          INT NOT NULL,
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS CUSTOMERS(
 
 Instead of creating a new table every time, one can also copy an existing table and its contents including its structure, into a new table. This can be done using a combination of the CREATE TABLE statement and the SELECT statement. Since its structure is copied, the new table will have the same column definitions as the original table. Furthermore, the new table would be populated using the existing values from the old table.
 
-#### Syntax
+###### Syntax
 ```sql
 CREATE TABLE NEW_TABLE_NAME AS
 SELECT [column1, column2...columnN]
@@ -87,7 +87,7 @@ FROM EXISTING_TABLE_NAME
 WHERE Condition;
 ```
 
-#### Example
+###### Example
 ```sql
 CREATE TABLE SALARY AS
 SELECT ID, SALARY
@@ -97,14 +97,14 @@ FROM CUSTOMERS;
 
 You can change a MySQL table name using SQL RENAME TABLE statement.
 
-#### Syntax
+###### Syntax
 ```sql
 RENAME TABLE table_name TO new_table_name;
 ```
 
 Where, table_name is the current name of an existing table and new_table_name is the new name of the table.
 
-#### </> Example
+###### </> Example
 ```sql
 RENAME TABLE CUSTOMERS to BUYERS;
 ```
@@ -113,12 +113,12 @@ RENAME TABLE CUSTOMERS to BUYERS;
 
 The `ALTER TABLE` statement can be used to change or modify the structure of an existing table i.e. using this statement you can add/delete columns, create/destroy indexes, change the datatypes of the existing columns, rename the columns and, we can even rename the table.
 
-#### Syntax
+###### Syntax
 ```sql
 ALTER TABLE table_name RENAME [TO|AS] new_table_name
 ```
 
-#### </> Example
+###### </> Example
 ```sql
 ALTER TABLE BUYERS RENAME TO CUSTOMERS;
 ```
@@ -128,12 +128,12 @@ The SQL `TRUNCATE TABLE` command is used to empty a table. This command is a seq
 
 You can also use DROP TABLE command to delete a table but it will remove the complete table structure from the database and you would need to re-create this table once again if you wish you store some data again.
 
-#### Syntax
+###### Syntax
 ```sql
 TRUNCATE TABLE table_name;
 ```
 
-#### Example
+###### Example
 ```sql
 TRUNCATE TABLE CUSTOMERS;
 ```
@@ -158,11 +158,11 @@ Simple cloning operation creates a new replica table from the existing table and
 
 Here, clone table inherits only the basic column definitions like the NULL settings and default values from the original table. It does not inherit the indices and AUTO_INCREMENT definitions.
 
-#### Syntax
+###### Syntax
 ```sql
 CREATE TABLE new_table SELECT * FROM original_table;
 ```
-#### </> Example
+###### </> Example
 ```sql
 CREATE TABLE NEW_CUSTOMERS SELECT * FROM CUSTOMERS;
 ```
@@ -202,11 +202,11 @@ Shallow cloning operation creates a new replica table from the existing table bu
 
 Here, the clone table contains only the structure of the original table along with the column attributes including indices and AUTO_INCREMENT definition..
 
-#### Syntax
+###### Syntax
 ```sql
 CREATE TABLE new_table LIKE original_table;
 ```
-#### </> Example
+###### </> Example
 ```sql
 CREATE TABLE SHALL_CUSTOMERS LIKE CUSTOMERS;
 ```
@@ -233,13 +233,13 @@ Deep cloning operation is a combination of simple cloning and shallow cloning. I
 
 Since it is a combination of shallow and simple cloning, this type of cloning will have two different queries to be executed: one with CREATE TABLE statement and one with INSERT INTO statement. The CREATE TABLE statement will create the new table by including all the attributes of existing table; and INSERT INTO statement will insert the data from existing table into new table.
 
-#### Syntax
+###### Syntax
 ```sql
 CREATE TABLE new_table LIKE original_table;
 INSERT INTO new_table SELECT * FROM original_table;
 ```
 
-#### </> Example
+###### </> Example
 ```sql
 CREATE TABLE DEEP_CUSTOMERS LIKE CUSTOMERS;
     > Query OK, 0 rows affected (0.06 sec)
@@ -278,7 +278,7 @@ SELECT * FROM DEEP_CUSTOMERS;
 ## 📌 SQL - Temporary Tables
 To create temporary tables in MySQL, we follow the same query as creating regular database tables. However, instead of using the CREATE TABLE statement, you use `CREATE TEMPORARY TABLE statement`.
 
-#### Syntax
+###### Syntax
 ```sql
 CREATE TEMPORARY TABLE table_name(
    column1 datatype,
@@ -290,7 +290,7 @@ CREATE TEMPORARY TABLE table_name(
 );
 ```
 
-#### </> Example
+###### </> Example
 ```sql
 CREATE TEMPORARY TABLE CUSTOMERS(
    ID   INT              NOT NULL,
@@ -306,11 +306,11 @@ CREATE TEMPORARY TABLE CUSTOMERS(
 
 Though all the temporary tables are deleted by MySQL when your database connection gets terminated, still, if you want to delete them manually, then you can do so by issuing a DROP TEMPORARY TABLE command.
 
-#### Syntax
+###### Syntax
 ```sql
 DROP TEMPORARY TABLE table_name;
 ```
-#### Example
+###### Example
 ```sql
 DROP TEMPORARY TABLE CUSTOMERS;
 ```
@@ -318,7 +318,7 @@ DROP TEMPORARY TABLE CUSTOMERS;
 ## 📌 ALTER TABLE Statement
 The SQL ALTER TABLE command is a part of Data Definition Language (DDL) and modifies the structure of a table. The ALTER TABLE command can add or delete columns, create or destroy indexes, change the type of existing columns, or rename columns or the table itself.
 
-#### Syntax
+###### Syntax
 ```sql
 ALTER TABLE table_name [alter_option ...];
 ```
@@ -329,7 +329,7 @@ If you need to add a new column to a table, you should use the ADD COLUMN option
 ```sql
 ALTER TABLE table_name ADD column_name datatype;
 ```
-#### </> Example
+###### </> Example
 ```sql
 ALTER TABLE CUSTOMERS ADD SEX char(1);
 ```
@@ -340,7 +340,7 @@ If you need to drop an existing column from a table, you should use the DROP COL
 ```sql
 ALTER TABLE table_name DROP COLUMN column_name;
 ```
-#### </> Example
+###### </> Example
 ```sql
 ALTER TABLE CUSTOMERS DROP COLUMN SEX;
 ```
@@ -350,7 +350,7 @@ You can add index to an existing column of a table using the ADD INDEX statement
 ALTER TABLE table_name 
 ADD INDEX index_name [index_type] 
 ```
-#### </> Example
+###### </> Example
 ```sql
 ALTER TABLE CUSTOMERS ADD INDEX name_index (NAME);
 ```
@@ -361,7 +361,7 @@ You can drop an existing index from a table using the DROP INDEX statement along
 ```sql
 ALTER TABLE table_name DROP INDEX index_name;
 ```
-#### </> Example
+###### </> Example
 ```sql
 ALTER TABLE CUSTOMERS DROP INDEX name_index;
 ```
@@ -374,7 +374,7 @@ ALTER TABLE table_name
 ADD CONSTRAINT constraint_name
 PRIMARY KEY (column1, column2...);
 ```
-#### </> Example
+###### </> Example
 ```sql
 ALTER TABLE EMPLOYEES 
 ADD CONSTRAINT MyPrimaryKey 
@@ -386,50 +386,50 @@ Following is the syntax to delete a primary key from an existing table of a data
 ```sql
 ALTER TABLE table_name DROP PRIMARY KEY;
 ```
-#### </> Example
+###### </> Example
 ```sql
 ALTER TABLE EMPLOYEES DROP PRIMARY KEY;
 ```
 
 ### 7) ALTER TABLE − ADD CONSTRAINT
-#### Syntax
+###### Syntax
 ```sql
 ALTER TABLE table_name 
 ADD CONSTRAINT constraint_name 
 UNIQUE(column1, column2...);
 ```
-#### </> Example
+###### </> Example
 ```sql
 ALTER TABLE EMPLOYEES ADD CONSTRAINT CONST UNIQUE(NAME);
 ```
 
 ### 8) ALTER TABLE − DROP CONSTRAINT
-#### Syntax
+###### Syntax
 ```sql
 ALTER TABLE table_name DROP CONSTRAINT constraint_name;
 ```
-#### </> Example
+###### </> Example
 ```sql
 ALTER TABLE EMPLOYEES DROP CONSTRAINT CONST;
 ```
 
 ### 9) ALTER TABLE − RENAME COLUMN
-#### Syntax
+###### Syntax
 ```sql
 ALTER TABLE table_name 
 RENAME COLUMN old_column_name to new_column_name;
 ```
-#### Example
+###### Example
 ```sql
 ALTER TABLE CUSTOMERS RENAME COLUMN name to full_name;
 ```
 
 ### 10) ALTER TABLE − MODIFY DATATYPE
-#### Syntax
+###### Syntax
 ```sql
 ALTER TABLE table_name MODIFY COLUMN column_name datatype;
 ```
-#### </> Exmaple
+###### </> Exmaple
 ```sql
 ALTER TABLE CUSTOMERS MODIFY COLUMN ID DECIMAL(18, 4);
 ```
@@ -437,11 +437,11 @@ ALTER TABLE CUSTOMERS MODIFY COLUMN ID DECIMAL(18, 4);
 ##  📌 DROP Table Statement
 The SQL DROP TABLE statement is a Data Definition Language (DDL) command that is used to remove a table's definition, and its data, indexes, triggers, constraints and permission specifications (if any).
 
-#### Syntax
+###### Syntax
 ```sql
 DROP TABLE table_name;
 ```
-#### </> Example
+###### </> Example
 ```sql
 DROP TABLE CUSTOMERS;
 ```
@@ -450,11 +450,11 @@ DROP TABLE CUSTOMERS;
 
 Instead of always checking if the table exists or not in a database before dropping it, you can use the IF EXISTS clause in the DROP TABLE statement.
 
-#### Syntax
+###### Syntax
 ```sql
 DROP TABLE [IF EXISTS] table_name;
 ```
-#### </> Exmaple
+###### </> Exmaple
 ```sql
 DROP TABLE IF EXISTS CUSTOMERS;
 ```
@@ -463,11 +463,11 @@ DROP TABLE IF EXISTS CUSTOMERS;
 
 You can include TEMPORARY keyword with DROP TABLE statement which will drop only TEMPORARY tables. Including the TEMPORARY keyword is a good way to prevent accidentally dropping non-TEMPORARY tables.
 
-#### Syntax
+###### Syntax
 ```sql
 DROP TEMPORARY TABLE TEMP_TABLE;
 ```
-#### Example
+###### Example
 ```sql
 DROP TEMPORARY TABLE CUSTOMERS;
 ```

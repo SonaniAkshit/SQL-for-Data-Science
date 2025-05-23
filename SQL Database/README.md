@@ -3,18 +3,18 @@
 ## 📌 CREATE Database Statement
 The **CREATE DATABASE statement** is a **DDL (Data Definition Language)** statement used to create a new database in SQL. If you are creating your database on Linux or Unix, then database names are case-sensitive, even though SQL keywords are case-insensitive. If you are working on Windows then this restriction does not apply.
 
-#### Syntax
+###### Syntax
 ```sql
 create Database DatabseName;
 ```
-#### Example
+###### </> Example
 ```sql
 create Database sql_for_data_science;
 ```
 ## 📌 List Databases
 Once the database sql_for_data_science is created, you can check it in the list of databases using SQL command SHOW DATABASES;.
 
-#### Syntax
+###### Syntax
 ```sql
 show databses;
 ```
@@ -37,7 +37,7 @@ show databses;
 
 We can now set the sql_for_data_science as the default database by using the USE statement in SQL.
 
-#### Syntax
+###### Syntax
 ```sql
 use sql_for_data_science;
 ```
@@ -45,12 +45,12 @@ use sql_for_data_science;
 
 The SQL **DROP DATABASE** statement is used to delete an existing database along with all the data such as tables, views, indexes, stored procedures, and constraints.
 
-#### Syntax
+###### Syntax
 ```sql
 DROP DATABASE DatabaseName;
 ```
 
-#### Example
+###### </> Example
 ```sql
 DROP DATABASE sql_for_data_science;
 ```
@@ -59,11 +59,11 @@ DROP DATABASE sql_for_data_science;
 
 The **ALTER DATABASE...MODIFY** statement in SQL is used to rename the name of an existing database name in SQL Database Server. Please note that this command does not work in MySQL database.
 
-#### Syntax
+###### Syntax
 ```sql
 ALTER DATABASE OldDatabaseName MODIFY NAME = NewDatabaseName;
 ```
-#### Exmaple
+###### </> Exmaple
 ```sql
 ALTER DATABASE sql_for_data_science MODIFY NAME = sql_for_datascience; 
 ```
@@ -72,7 +72,7 @@ ALTER DATABASE sql_for_data_science MODIFY NAME = sql_for_datascience;
 
 In SQL, the BACKUP DATABASE statement is used to create database backups.
 
-#### Syntax
+###### Syntax
 ```sql
 BACKUP DATABASE database_name
 TO DISK = 'filepath'
@@ -91,7 +91,7 @@ In SQL, there are three types of database backups available. These are:
 
 A full backup is a complete backup of an SQL server database.
 
-#### Syntax
+###### Syntax
 ```sql
 BACKUP DATABASE database_name
 TO medium = 'filepath'
@@ -102,7 +102,7 @@ GO
 
 In Sql, you can also backup only the new changes by using the WITH DIFFERENTIAL command.
 
-#### Syntax
+###### Syntax
 ```sql
 BACKUP DATABASE my_db
 TO medium = 'filepath'
@@ -113,7 +113,7 @@ GO
 #### 3) Transaction Log (T-log) backup
 A transaction log backup includes all the transactions since the last transaction log backup. BACKUP LOG comnmand is used to perfom the Transaction Log backup.
 
-#### Syntax
+###### Syntax
 ```sql
 BACKUP LOG database_name
 TO medium = 'filepath';
@@ -121,13 +121,13 @@ GO
 ```
 
 ### 📌 Backup SQL Database
-#### Syntax
+###### Syntax
 ```sql
 RESTORE DATABASE database_name
 FROM DISK = 'filepath';
 GO
 ```
-#### Example
+###### </> Example
 ```sql
 SQL> BACKUP DATABASE testDB
 TO DISK = 'D:\testDB.bak'
@@ -137,14 +137,14 @@ GO
 ## 📌 Restore Database From Backup
 To restore a backup file in Database, we can use the RESTORE DATABASE command.
 
-#### Syntax
+###### Syntax
 ```sql
 RESTORE DATABASE database_name
 FROM DISK = 'filepath'
 [WITH REPLACE]
 GO
 ```
-#### Example
+###### </> Example
 ```sql
 SQL> RESTORE DATABASE testDB
 FROM DISK = 'D:\testDB.bak'
