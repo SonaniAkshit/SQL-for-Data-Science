@@ -1196,80 +1196,156 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="341" parent="334" name="new_customers">
+    <table id="341" parent="334" name="deep_customers">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="342" parent="334" name="salary">
+    <table id="342" parent="334" name="new_customers">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <column id="343" parent="340" name="id">
+    <table id="343" parent="334" name="salary">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <table id="344" parent="334" name="shall_customers">
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <column id="345" parent="340" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="344" parent="340" name="name">
+    <column id="346" parent="340" name="name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="345" parent="340" name="age">
+    <column id="347" parent="340" name="age">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="346" parent="340" name="address">
+    <column id="348" parent="340" name="address">
       <Position>4</Position>
       <StoredType>char(25)|0s</StoredType>
     </column>
-    <column id="347" parent="340" name="salary">
+    <column id="349" parent="340" name="salary">
       <Position>5</Position>
       <StoredType>decimal(20,2 digit)|0s</StoredType>
     </column>
-    <index id="348" parent="340" name="PRIMARY">
+    <index id="350" parent="340" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="349" parent="340" name="PRIMARY">
+    <key id="351" parent="340" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="350" parent="341" name="id">
+    <column id="352" parent="341" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="351" parent="341" name="name">
+    <column id="353" parent="341" name="name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="352" parent="341" name="age">
+    <column id="354" parent="341" name="age">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="353" parent="341" name="address">
+    <column id="355" parent="341" name="address">
       <Position>4</Position>
       <StoredType>char(25)|0s</StoredType>
     </column>
-    <column id="354" parent="341" name="salary">
+    <column id="356" parent="341" name="salary">
       <Position>5</Position>
       <StoredType>decimal(20,2 digit)|0s</StoredType>
     </column>
-    <column id="355" parent="342" name="id">
+    <index id="357" parent="341" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="358" parent="341" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="359" parent="342" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="356" parent="342" name="salary">
+    <column id="360" parent="342" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="361" parent="342" name="age">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="362" parent="342" name="address">
+      <Position>4</Position>
+      <StoredType>char(25)|0s</StoredType>
+    </column>
+    <column id="363" parent="342" name="salary">
+      <Position>5</Position>
+      <StoredType>decimal(20,2 digit)|0s</StoredType>
+    </column>
+    <column id="364" parent="343" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="365" parent="343" name="salary">
       <Position>2</Position>
       <StoredType>decimal(20,2 digit)|0s</StoredType>
     </column>
+    <column id="366" parent="344" name="id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="367" parent="344" name="name">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="368" parent="344" name="age">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="369" parent="344" name="address">
+      <Position>4</Position>
+      <StoredType>char(25)|0s</StoredType>
+    </column>
+    <column id="370" parent="344" name="salary">
+      <Position>5</Position>
+      <StoredType>decimal(20,2 digit)|0s</StoredType>
+    </column>
+    <index id="371" parent="344" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="372" parent="344" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
   </database-model>
 </dataSource>

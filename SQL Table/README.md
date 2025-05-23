@@ -169,6 +169,33 @@ CREATE TABLE NEW_CUSTOMERS SELECT * FROM CUSTOMERS;
     Query OK, 7 rows affected (0.06 sec)
     Records: 7  Duplicates: 0  Warnings: 0
 
+```sql
+select * from NEW_CUSTOMERS;
+```
+| id | name | age | address | salary |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Alice | 28 | New York | 55000.00 |
+| 2 | Bob | 35 | Los Angeles | 62000.00 |
+| 3 | Charlie | 30 | Chicago | 58000.00 |
+| 4 | David | 40 | Houston | 72000.00 |
+| 5 | Eve | 26 | Phoenix | 48000.00 |
+| 6 | Frank | 38 | Philadelphia | 69000.00 |
+| 7 | Grace | 31 | San Antonio | 53000.00 |
+| 8 | Heidi | 29 | San Diego | 60000.00 |
+| 9 | Ivan | 34 | Dallas | 64000.00 |
+| 10 | Judy | 27 | San Jose | 51000.00 |
+| 11 | Karl | 36 | Austin | 70000.00 |
+| 12 | Laura | 33 | Jacksonville | 62000.00 |
+| 13 | Mallory | 41 | Fort Worth | 75000.00 |
+| 14 | Niaj | 25 | Columbus | 46000.00 |
+| 15 | Olivia | 32 | Charlotte | 59000.00 |
+| 16 | Peggy | 37 | Indianapolis | 68000.00 |
+| 17 | Quentin | 29 | Seattle | 61000.00 |
+| 18 | Rupert | 39 | Denver | 72000.00 |
+| 19 | Sybil | 28 | Washington | 56000.00 |
+| 20 | Trent | 35 | Boston | 63000.00 |
+
+
 #### 2) Shallow Cloning in MySQL
 
 Shallow cloning operation creates a new replica table from the existing table but does not copy any data records into newly created table, so only new but empty table is created.
@@ -188,6 +215,18 @@ CREATE TABLE SHALL_CUSTOMERS LIKE CUSTOMERS;
 ```sql
 DESC SHALL_CUSTOMERS;
 ```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| id | int\(11\) | NO | PRI | null |  |
+| name | varchar\(20\) | NO |  | null |  |
+| age | int\(11\) | NO |  | null |  |
+| address | char\(25\) | YES |  | null |  |
+| salary | decimal\(20,2\) | YES |  | null |  |
+
+```sql
+select * from shall_customers;
+```
+    0 rows retrieved
 
 #### 3) Deep Cloning in MySQL
 Deep cloning operation is a combination of simple cloning and shallow cloning. It not only copies the structure of the existing table but also its data into the newly created table. Hence, the new table will have all the contents from existing table and all the attributes including indices and the AUTO_INCREMENT definitions.
@@ -213,6 +252,28 @@ INSERT INTO DEEP_CUSTOMERS SELECT * FROM CUSTOMERS;
 ```sql
 SELECT * FROM DEEP_CUSTOMERS;
 ```
+| id | name | age | address | salary |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Alice | 28 | New York | 55000.00 |
+| 2 | Bob | 35 | Los Angeles | 62000.00 |
+| 3 | Charlie | 30 | Chicago | 58000.00 |
+| 4 | David | 40 | Houston | 72000.00 |
+| 5 | Eve | 26 | Phoenix | 48000.00 |
+| 6 | Frank | 38 | Philadelphia | 69000.00 |
+| 7 | Grace | 31 | San Antonio | 53000.00 |
+| 8 | Heidi | 29 | San Diego | 60000.00 |
+| 9 | Ivan | 34 | Dallas | 64000.00 |
+| 10 | Judy | 27 | San Jose | 51000.00 |
+| 11 | Karl | 36 | Austin | 70000.00 |
+| 12 | Laura | 33 | Jacksonville | 62000.00 |
+| 13 | Mallory | 41 | Fort Worth | 75000.00 |
+| 14 | Niaj | 25 | Columbus | 46000.00 |
+| 15 | Olivia | 32 | Charlotte | 59000.00 |
+| 16 | Peggy | 37 | Indianapolis | 68000.00 |
+| 17 | Quentin | 29 | Seattle | 61000.00 |
+| 18 | Rupert | 39 | Denver | 72000.00 |
+| 19 | Sybil | 28 | Washington | 56000.00 |
+| 20 | Trent | 35 | Boston | 63000.00 |
 
 ## 📌 SQL - Temporary Tables
 To create temporary tables in MySQL, we follow the same query as creating regular database tables. However, instead of using the CREATE TABLE statement, you use `CREATE TEMPORARY TABLE statement`.
