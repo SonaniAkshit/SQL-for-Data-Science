@@ -133,7 +133,7 @@ You can also use DROP TABLE command to delete a table but it will remove the com
 TRUNCATE TABLE table_name;
 ```
 
-###### Example
+###### </> Example
 ```sql
 TRUNCATE TABLE CUSTOMERS;
 ```
@@ -310,7 +310,7 @@ Though all the temporary tables are deleted by MySQL when your database connecti
 ```sql
 DROP TEMPORARY TABLE table_name;
 ```
-###### Example
+###### </> Example
 ```sql
 DROP TEMPORARY TABLE CUSTOMERS;
 ```
@@ -419,7 +419,7 @@ ALTER TABLE EMPLOYEES DROP CONSTRAINT CONST;
 ALTER TABLE table_name 
 RENAME COLUMN old_column_name to new_column_name;
 ```
-###### Example
+###### </> Example
 ```sql
 ALTER TABLE CUSTOMERS RENAME COLUMN name to full_name;
 ```
@@ -467,7 +467,7 @@ You can include TEMPORARY keyword with DROP TABLE statement which will drop only
 ```sql
 DROP TEMPORARY TABLE TEMP_TABLE;
 ```
-###### Example
+###### </> Example
 ```sql
 DROP TEMPORARY TABLE CUSTOMERS;
 ```
