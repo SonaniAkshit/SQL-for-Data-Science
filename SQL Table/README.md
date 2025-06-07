@@ -36,11 +36,12 @@ DESC CUSTOMERS;
 ```
 | Field | Type | Null | Key | Default | Extra |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| id | int\(11\) | NO |  | null |  |
+| id | int\(11\) | NO | PRI | null |  |
 | name | varchar\(20\) | NO |  | null |  |
 | age | int\(11\) | NO |  | null |  |
-| address | char\(25\) | YES |  | null |  |
-| salary | decimal\(20,2\) | YES |  | null |  |
+| address | char\(255\) | YES |  | null |  |
+| salary | decimal\(18,2\) | YES |  | null |  |
+
 
 
 ## 📌 CREATE TABLE IF NOT EXISTS
