@@ -1406,11 +1406,11 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
     </column>
     <column id="385" parent="345" name="address">
       <Position>4</Position>
-      <StoredType>char(25)|0s</StoredType>
+      <StoredType>char(255)|0s</StoredType>
     </column>
     <column id="386" parent="345" name="salary">
       <Position>5</Position>
-      <StoredType>decimal(20,2 digit)|0s</StoredType>
+      <StoredType>decimal(18,2 digit)|0s</StoredType>
     </column>
     <column id="387" parent="346" name="ID">
       <NotNull>1</NotNull>

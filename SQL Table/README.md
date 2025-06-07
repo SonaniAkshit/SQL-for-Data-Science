@@ -181,34 +181,18 @@ CREATE TABLE new_table SELECT * FROM original_table;
 ```sql
 CREATE TABLE NEW_CUSTOMERS SELECT * FROM CUSTOMERS;
 ```
-    Query OK, 7 rows affected (0.06 sec)
-    Records: 7  Duplicates: 0  Warnings: 0
-
 ```sql
-select * from NEW_CUSTOMERS;
+[2025-06-07 10:54:24] 3 rows affected in 22 ms
+```
+```sql
+select * from new_customers;
 ```
 | id | name | age | address | salary |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | Alice | 28 | New York | 55000.00 |
-| 2 | Bob | 35 | Los Angeles | 62000.00 |
-| 3 | Charlie | 30 | Chicago | 58000.00 |
-| 4 | David | 40 | Houston | 72000.00 |
-| 5 | Eve | 26 | Phoenix | 48000.00 |
-| 6 | Frank | 38 | Philadelphia | 69000.00 |
-| 7 | Grace | 31 | San Antonio | 53000.00 |
-| 8 | Heidi | 29 | San Diego | 60000.00 |
-| 9 | Ivan | 34 | Dallas | 64000.00 |
-| 10 | Judy | 27 | San Jose | 51000.00 |
-| 11 | Karl | 36 | Austin | 70000.00 |
-| 12 | Laura | 33 | Jacksonville | 62000.00 |
-| 13 | Mallory | 41 | Fort Worth | 75000.00 |
-| 14 | Niaj | 25 | Columbus | 46000.00 |
-| 15 | Olivia | 32 | Charlotte | 59000.00 |
-| 16 | Peggy | 37 | Indianapolis | 68000.00 |
-| 17 | Quentin | 29 | Seattle | 61000.00 |
-| 18 | Rupert | 39 | Denver | 72000.00 |
-| 19 | Sybil | 28 | Washington | 56000.00 |
-| 20 | Trent | 35 | Boston | 63000.00 |
+| 1 | Chaitali | 25 | Mumbai | 6500.00 |
+| 2 | Hardik | 27 | Bhopal | 8500.00 |
+| 3 | Komal | 22 | Hyderabad | 4500.00 |
+
 
 
 #### 2) Shallow Cloning in MySQL
