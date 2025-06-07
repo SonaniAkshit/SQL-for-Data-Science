@@ -155,7 +155,9 @@ TRUNCATE TABLE CUSTOMERS;
 ```sql
 SELECT * FROM CUSTOMERS;
 ```
-    Empty set (0.00 sec)
+```sql
+0 rows retrieved in 390 ms
+```
 
 ## 📌 SQL - Clone Tables
 There may be a situation when you need an exact copy of a table with the same columns, attributes, indexes, default values and so forth. Instead of spending time on creating the exact same version of an existing table, you can create a clone of the existing table.
