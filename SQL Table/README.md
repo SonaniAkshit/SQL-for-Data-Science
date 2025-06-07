@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS CUSTOMERS(
     );
 ```
 ```sql
-O/P> [1050] Table 'customers' already exists
+> [1050] Table 'customers' already exists
 ```
 
 ## 📌 Creating a Table from an Existing Table
@@ -154,7 +154,7 @@ TRUNCATE TABLE CUSTOMERS;
 SELECT * FROM CUSTOMERS;
 ```
 ```sql
-O/P> 0 rows retrieved in 390 ms
+> 0 rows retrieved in 390 ms
 ```
 
 ## 📌 SQL - Clone Tables
@@ -180,7 +180,7 @@ CREATE TABLE new_table SELECT * FROM original_table;
 CREATE TABLE NEW_CUSTOMERS SELECT * FROM CUSTOMERS;
 ```
 ```sql
-O/P> 3 rows affected in 22 ms
+> 3 rows affected in 22 ms
 ```
 ```sql
 select * from new_customers;
@@ -211,7 +211,7 @@ CREATE TABLE SHALL_CUSTOMERS LIKE CUSTOMERS;
 select * from shall_customers;
 ```
 ```sql
-O/P> 0 rows retrieved in 517 ms
+> 0 rows retrieved in 517 ms
 ```
 ```sql
 DESC shall_customers;
@@ -238,38 +238,20 @@ INSERT INTO new_table SELECT * FROM original_table;
 ###### </> Example
 ```sql
 CREATE TABLE DEEP_CUSTOMERS LIKE CUSTOMERS;
-    > Query OK, 0 rows affected (0.06 sec)
+    > completed in 32 ms
 INSERT INTO DEEP_CUSTOMERS SELECT * FROM CUSTOMERS;
-    > Query OK, 7 rows affected (0.01 sec)
-    Records: 7  Duplicates: 0  Warnings: 0
+    > 3 rows affected in 14 ms
 ```
-
-#### ✅ Verification
 ```sql
 SELECT * FROM DEEP_CUSTOMERS;
+    > 3 rows retrieved starting from 1 in 483 ms
 ```
 | id | name | age | address | salary |
 | :--- | :--- | :--- | :--- | :--- |
-| 1 | Alice | 28 | New York | 55000.00 |
-| 2 | Bob | 35 | Los Angeles | 62000.00 |
-| 3 | Charlie | 30 | Chicago | 58000.00 |
-| 4 | David | 40 | Houston | 72000.00 |
-| 5 | Eve | 26 | Phoenix | 48000.00 |
-| 6 | Frank | 38 | Philadelphia | 69000.00 |
-| 7 | Grace | 31 | San Antonio | 53000.00 |
-| 8 | Heidi | 29 | San Diego | 60000.00 |
-| 9 | Ivan | 34 | Dallas | 64000.00 |
-| 10 | Judy | 27 | San Jose | 51000.00 |
-| 11 | Karl | 36 | Austin | 70000.00 |
-| 12 | Laura | 33 | Jacksonville | 62000.00 |
-| 13 | Mallory | 41 | Fort Worth | 75000.00 |
-| 14 | Niaj | 25 | Columbus | 46000.00 |
-| 15 | Olivia | 32 | Charlotte | 59000.00 |
-| 16 | Peggy | 37 | Indianapolis | 68000.00 |
-| 17 | Quentin | 29 | Seattle | 61000.00 |
-| 18 | Rupert | 39 | Denver | 72000.00 |
-| 19 | Sybil | 28 | Washington | 56000.00 |
-| 20 | Trent | 35 | Boston | 63000.00 |
+| 1 | Chaitali | 25 | Mumbai | 6500.00 |
+| 2 | Hardik | 27 | Bhopal | 8500.00 |
+| 3 | Komal | 22 | Hyderabad | 4500.00 |
+
 
 ## 📌 SQL - Temporary Tables
 To create temporary tables in MySQL, we follow the same query as creating regular database tables. However, instead of using the CREATE TABLE statement, you use `CREATE TEMPORARY TABLE statement`.
