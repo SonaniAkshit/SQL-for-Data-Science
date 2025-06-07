@@ -28,7 +28,7 @@ CREATE TABLE CUSTOMERS(
 ```
 
 ####  ✅ Verification
-Once your table is created, you can check if it has been created successfully or not. You can use SQL **`DESC table_name`** command to list down the description of the table.
+Once your table is created, you can check if it has been created successfully or not. You can use SQL `DESC table_name` command to list down the description of the table.
 
 ###### Syntax
 ```sql
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS CUSTOMERS(
     );
 ```
 ```sql
-O/P> [2025-06-07 10:39:10] [1050] Table 'customers' already exists
+O/P> [1050] Table 'customers' already exists
 ```
 
 ## 📌 Creating a Table from an Existing Table
@@ -150,8 +150,6 @@ TRUNCATE TABLE table_name;
 ```sql
 TRUNCATE TABLE CUSTOMERS;
 ```
-
-#### ✅ Verification
 ```sql
 SELECT * FROM CUSTOMERS;
 ```
@@ -182,7 +180,7 @@ CREATE TABLE new_table SELECT * FROM original_table;
 CREATE TABLE NEW_CUSTOMERS SELECT * FROM CUSTOMERS;
 ```
 ```sql
-O/P> [2025-06-07 10:54:24] 3 rows affected in 22 ms
+O/P> 3 rows affected in 22 ms
 ```
 ```sql
 select * from new_customers;
@@ -209,23 +207,22 @@ CREATE TABLE new_table LIKE original_table;
 ```sql
 CREATE TABLE SHALL_CUSTOMERS LIKE CUSTOMERS;
 ```
-    Query OK, 0 rows affected (0.06 sec)
-#### ✅ Verification
 ```sql
-DESC SHALL_CUSTOMERS;
+select * from shall_customers;
+```
+```sql
+O/P> 0 rows retrieved in 517 ms
+```
+```sql
+DESC shall_customers;
 ```
 | Field | Type | Null | Key | Default | Extra |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | id | int\(11\) | NO | PRI | null |  |
 | name | varchar\(20\) | NO |  | null |  |
 | age | int\(11\) | NO |  | null |  |
-| address | char\(25\) | YES |  | null |  |
-| salary | decimal\(20,2\) | YES |  | null |  |
-
-```sql
-select * from shall_customers;
-```
-    0 rows retrieved
+| address | char\(255\) | YES |  | null |  |
+| salary | decimal\(18,2\) | YES |  | null |  |
 
 #### 3) Deep Cloning in MySQL
 Deep cloning operation is a combination of simple cloning and shallow cloning. It not only copies the structure of the existing table but also its data into the newly created table. Hence, the new table will have all the contents from existing table and all the attributes including indices and the AUTO_INCREMENT definitions.
