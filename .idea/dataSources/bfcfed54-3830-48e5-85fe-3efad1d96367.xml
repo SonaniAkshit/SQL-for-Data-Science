@@ -1455,7 +1455,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
     </column>
     <column id="396" parent="347" name="salary">
       <Position>2</Position>
-      <StoredType>decimal(20,2 digit)|0s</StoredType>
+      <StoredType>decimal(18,2 digit)|0s</StoredType>
     </column>
     <column id="397" parent="348" name="id">
       <NotNull>1</NotNull>

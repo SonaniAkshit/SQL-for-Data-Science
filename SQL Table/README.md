@@ -97,6 +97,15 @@ CREATE TABLE SALARY AS
 SELECT ID, SALARY
 FROM CUSTOMERS;
 ```
+```sql
+desc salary;
+```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| id | int\(11\) | NO |  | null |  |
+| salary | decimal\(18,2\) | YES |  | null |  |
+
+
 ## 📌 RENAME TABLE Statement
 
 You can change a MySQL table name using SQL RENAME TABLE statement.
