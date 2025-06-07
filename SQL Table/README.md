@@ -75,6 +75,9 @@ CREATE TABLE IF NOT EXISTS CUSTOMERS(
     PRIMARY KEY (ID)
     );
 ```
+```sql
+[2025-06-07 10:39:10] [1050] Table 'customers' already exists
+```
 
 ## 📌 Creating a Table from an Existing Table
 
