@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS CUSTOMERS(
     );
 ```
 ```sql
-[2025-06-07 10:39:10] [1050] Table 'customers' already exists
+O/P> [2025-06-07 10:39:10] [1050] Table 'customers' already exists
 ```
 
 ## 📌 Creating a Table from an Existing Table
@@ -156,7 +156,7 @@ TRUNCATE TABLE CUSTOMERS;
 SELECT * FROM CUSTOMERS;
 ```
 ```sql
-0 rows retrieved in 390 ms
+O/P> 0 rows retrieved in 390 ms
 ```
 
 ## 📌 SQL - Clone Tables
@@ -182,7 +182,7 @@ CREATE TABLE new_table SELECT * FROM original_table;
 CREATE TABLE NEW_CUSTOMERS SELECT * FROM CUSTOMERS;
 ```
 ```sql
-[2025-06-07 10:54:24] 3 rows affected in 22 ms
+O/P> [2025-06-07 10:54:24] 3 rows affected in 22 ms
 ```
 ```sql
 select * from new_customers;
