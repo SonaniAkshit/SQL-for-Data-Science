@@ -504,6 +504,9 @@ DROP TABLE [IF EXISTS] table_name;
 ```sql
 DROP TABLE IF EXISTS CUSTOMERS;
 ```
+```sql
+>  [1051] Unknown table 'sql_for_data_science.customer'
+```
 
 ## 📌 DROP - TEMPORARY TABLE
 
