@@ -11,17 +11,17 @@ create table customers(
 );
 
 INSERT INTO customers (ID,NAME,AGE,ADDRESS,SALARY) VALUES
-                                                       (1, 'Chaitali', 25, 'Mumbai', 6500.00 ),
-                                                       (2, 'Hardik', 27, 'Bhopal', 8500.00 ),
-                                                       (3, 'Komal', 22, 'Hyderabad', 4500.00 );
+(1, 'Chaitali', 25, 'Mumbai', 6500.00 ),
+(2, 'Hardik', 27, 'Bhopal', 8500.00 ),
+(3, 'Komal', 22, 'Hyderabad', 4500.00 );
 
 desc customers;
 
 -- CREATE TABLE IF NOT EXISTS
 
 create table if not exists customers(
-                                        id int not null ,
-                                        name varchar(20) not null ,
+    id int not null ,
+    name varchar(20) not null ,
     age int not null ,
     address char(255) ,
     salary decimal(18,2),
