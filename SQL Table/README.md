@@ -270,7 +270,7 @@ CREATE TEMPORARY TABLE table_name(
 
 ###### </> Example
 ```sql
-CREATE TEMPORARY TABLE CUSTOMERS(
+CREATE TEMPORARY TABLE TEMP_CUSTOMERS(
    ID   INT              NOT NULL,
    NAME VARCHAR (20)     NOT NULL,
    AGE  INT              NOT NULL,
@@ -279,6 +279,17 @@ CREATE TEMPORARY TABLE CUSTOMERS(
    PRIMARY KEY (ID)
 );
 ```
+```sql
+show tables;
+```
+| Tables\_in\_sql\_for\_data\_science |
+| :--- |
+| customer |
+| customers |
+| deep\_customers |
+| new\_customers |
+| sal |
+| shall\_customers |
 
 ## 📌 Dropping Temporary Tables in MySQL
 
@@ -311,6 +322,15 @@ ALTER TABLE table_name ADD column_name datatype;
 ```sql
 ALTER TABLE CUSTOMERS ADD SEX char(1);
 ```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| id | int\(11\) | NO | PRI | null |  |
+| name | varchar\(20\) | NO |  | null |  |
+| age | int\(11\) | NO |  | null |  |
+| address | char\(255\) | YES |  | null |  |
+| salary | decimal\(18,2\) | YES |  | null |  |
+| sex | char\(1\) | YES |  | null |  |
+
 
 ### 2) ALTER TABLE − DROP COLUMN
 
@@ -322,6 +342,15 @@ ALTER TABLE table_name DROP COLUMN column_name;
 ```sql
 ALTER TABLE CUSTOMERS DROP COLUMN SEX;
 ```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| id | int\(11\) | NO | PRI | null |  |
+| name | varchar\(20\) | NO |  | null |  |
+| age | int\(11\) | NO |  | null |  |
+| address | char\(255\) | YES |  | null |  |
+| salary | decimal\(18,2\) | YES |  | null |  |
+
+
 ### 3) ALTER TABLE − ADD INDEX
 You can add index to an existing column of a table using the ADD INDEX statement along with the ALTER statement −
 ```sql
@@ -332,6 +361,14 @@ ADD INDEX index_name [index_type]
 ```sql
 ALTER TABLE CUSTOMERS ADD INDEX name_index (NAME);
 ```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| id | int\(11\) | NO | PRI | null |  |
+| name | varchar\(20\) | NO | MUL | null |  |
+| age | int\(11\) | NO |  | null |  |
+| address | char\(255\) | YES |  | null |  |
+| salary | decimal\(18,2\) | YES |  | null |  |
+
 
 ### 4) ALTER TABLE − DROP INDEX
 
@@ -343,6 +380,14 @@ ALTER TABLE table_name DROP INDEX index_name;
 ```sql
 ALTER TABLE CUSTOMERS DROP INDEX name_index;
 ```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| id | int\(11\) | NO | PRI | null |  |
+| name | varchar\(20\) | NO |  | null |  |
+| age | int\(11\) | NO |  | null |  |
+| address | char\(255\) | YES |  | null |  |
+| salary | decimal\(18,2\) | YES |  | null |  |
+
 
 ### 5) ALTER TABLE − ADD PRIMARY KEY
 
