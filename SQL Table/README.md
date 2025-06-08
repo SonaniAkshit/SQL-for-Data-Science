@@ -399,9 +399,7 @@ PRIMARY KEY (column1, column2...);
 ```
 ###### </> Example
 ```sql
-ALTER TABLE EMPLOYEES 
-ADD CONSTRAINT MyPrimaryKey 
-PRIMARY KEY(ID);
+alter table customers add constraint primary key(id);
 ```
 
 ### 6) ALTER TABLE − DROP PRIMARY KEY
@@ -411,8 +409,16 @@ ALTER TABLE table_name DROP PRIMARY KEY;
 ```
 ###### </> Example
 ```sql
-ALTER TABLE EMPLOYEES DROP PRIMARY KEY;
+ALTER TABLE customers DROP PRIMARY KEY;
 ```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| id | int\(11\) | NO |  | null |  |
+| name | varchar\(20\) | NO |  | null |  |
+| age | int\(11\) | NO |  | null |  |
+| address | char\(255\) | YES |  | null |  |
+| salary | decimal\(18,2\) | YES |  | null |  |
+
 
 ### 7) ALTER TABLE − ADD CONSTRAINT
 ###### Syntax
@@ -423,18 +429,35 @@ UNIQUE(column1, column2...);
 ```
 ###### </> Example
 ```sql
-ALTER TABLE EMPLOYEES ADD CONSTRAINT CONST UNIQUE(NAME);
+ALTER TABLE customers ADD CONSTRAINT CONST UNIQUE(NAME);
 ```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| id | int\(11\) | NO |  | null |  |
+| name | varchar\(20\) | NO | PRI | null |  |
+| age | int\(11\) | NO |  | null |  |
+| address | char\(255\) | YES |  | null |  |
+| salary | decimal\(18,2\) | YES |  | null |  |
+
 
 ### 8) ALTER TABLE − DROP CONSTRAINT
 ###### Syntax
 ```sql
 ALTER TABLE table_name DROP CONSTRAINT constraint_name;
 ```
+
 ###### </> Example
 ```sql
-ALTER TABLE EMPLOYEES DROP CONSTRAINT CONST;
+ALTER TABLE customers DROP CONSTRAINT CONST;
 ```
+| Field | Type | Null | Key | Default | Extra |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| id | int\(11\) | NO |  | null |  |
+| name | varchar\(20\) | NO |  | null |  |
+| age | int\(11\) | NO |  | null |  |
+| address | char\(255\) | YES |  | null |  |
+| salary | decimal\(18,2\) | YES |  | null |  |
+
 
 ### 9) ALTER TABLE − RENAME COLUMN
 ###### Syntax
