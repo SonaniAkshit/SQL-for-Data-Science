@@ -1191,253 +1191,183 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
     <user id="339" parent="1" name="pma">
       <Host>localhost</Host>
     </user>
-    <table id="340" parent="335" name="customers">
+    <table id="340" parent="335" name="buyers">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="341" parent="335" name="customers1">
+    <table id="341" parent="335" name="customers">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="342" parent="335" name="customers3">
+    <table id="342" parent="335" name="customers1">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="343" parent="335" name="deep_customers">
+    <table id="343" parent="335" name="customers3">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="344" parent="335" name="new_customers">
+    <table id="344" parent="335" name="orders">
       <DetailsLevel>3</DetailsLevel>
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_general_ci</CollationName>
     </table>
-    <table id="345" parent="335" name="orders">
-      <DetailsLevel>3</DetailsLevel>
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <table id="346" parent="335" name="sal">
-      <DetailsLevel>3</DetailsLevel>
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <table id="347" parent="335" name="shall_customers">
-      <DetailsLevel>3</DetailsLevel>
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_general_ci</CollationName>
-    </table>
-    <column id="348" parent="340" name="id">
+    <column id="345" parent="340" name="ID">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="349" parent="340" name="name">
+    <column id="346" parent="340" name="NAME">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="350" parent="340" name="age">
+    <column id="347" parent="340" name="AGE">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="351" parent="340" name="address">
-      <Position>4</Position>
-      <StoredType>char(255)|0s</StoredType>
-    </column>
-    <column id="352" parent="340" name="salary">
-      <Position>5</Position>
-      <StoredType>decimal(18,2 digit)|0s</StoredType>
-    </column>
-    <column id="353" parent="341" name="ID">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int(11)|0s</StoredType>
-    </column>
-    <column id="354" parent="341" name="NAME">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>varchar(20)|0s</StoredType>
-    </column>
-    <column id="355" parent="341" name="AGE">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>int(11)|0s</StoredType>
-    </column>
-    <column id="356" parent="341" name="ADDRESS">
+    <column id="348" parent="340" name="ADDRESS">
       <Position>4</Position>
       <StoredType>char(25)|0s</StoredType>
     </column>
-    <column id="357" parent="341" name="SALARY">
+    <column id="349" parent="340" name="SALARY">
       <Position>5</Position>
       <StoredType>decimal(18,2 digit)|0s</StoredType>
     </column>
-    <column id="358" parent="342" name="ID">
+    <index id="350" parent="340" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="351" parent="340" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="352" parent="341" name="ID">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="359" parent="342" name="NAME">
+    <column id="353" parent="341" name="NAME">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="354" parent="341" name="AGE">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="355" parent="341" name="ADDRESS">
+      <Position>4</Position>
+      <StoredType>char(25)|0s</StoredType>
+    </column>
+    <column id="356" parent="341" name="SALARY">
+      <Position>5</Position>
+      <StoredType>decimal(18,2 digit)|0s</StoredType>
+    </column>
+    <index id="357" parent="341" name="PRIMARY">
+      <ColNames>ID</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="358" parent="341" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="359" parent="342" name="ID">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="360" parent="342" name="NAME">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="361" parent="342" name="AGE">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="362" parent="342" name="ADDRESS">
+      <Position>4</Position>
+      <StoredType>char(25)|0s</StoredType>
+    </column>
+    <column id="363" parent="342" name="SALARY">
+      <Position>5</Position>
+      <StoredType>decimal(18,2 digit)|0s</StoredType>
+    </column>
+    <column id="364" parent="343" name="ID">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="365" parent="343" name="NAME">
       <DefaultExpression>&apos;Not Available&apos;</DefaultExpression>
       <Position>2</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="360" parent="342" name="AGE">
+    <column id="366" parent="343" name="AGE">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="361" parent="342" name="ADDRESS">
+    <column id="367" parent="343" name="ADDRESS">
       <Position>4</Position>
       <StoredType>char(25)|0s</StoredType>
     </column>
-    <column id="362" parent="342" name="SALARY">
+    <column id="368" parent="343" name="SALARY">
       <Position>5</Position>
       <StoredType>decimal(18,2 digit)|0s</StoredType>
     </column>
-    <index id="363" parent="342" name="ID">
+    <index id="369" parent="343" name="ID">
       <ColNames>ID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="364" parent="342" name="ID">
+    <key id="370" parent="343" name="ID">
       <UnderlyingIndexName>ID</UnderlyingIndexName>
     </key>
-    <column id="365" parent="343" name="id">
+    <column id="371" parent="344" name="ID">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="366" parent="343" name="name">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>varchar(20)|0s</StoredType>
-    </column>
-    <column id="367" parent="343" name="age">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>int(11)|0s</StoredType>
-    </column>
-    <column id="368" parent="343" name="address">
-      <Position>4</Position>
-      <StoredType>char(255)|0s</StoredType>
-    </column>
-    <column id="369" parent="343" name="salary">
-      <Position>5</Position>
-      <StoredType>decimal(18,2 digit)|0s</StoredType>
-    </column>
-    <index id="370" parent="343" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="371" parent="343" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="372" parent="344" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int(11)|0s</StoredType>
-    </column>
-    <column id="373" parent="344" name="name">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>varchar(20)|0s</StoredType>
-    </column>
-    <column id="374" parent="344" name="age">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>int(11)|0s</StoredType>
-    </column>
-    <column id="375" parent="344" name="address">
-      <Position>4</Position>
-      <StoredType>char(255)|0s</StoredType>
-    </column>
-    <column id="376" parent="344" name="salary">
-      <Position>5</Position>
-      <StoredType>decimal(18,2 digit)|0s</StoredType>
-    </column>
-    <column id="377" parent="345" name="ID">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int(11)|0s</StoredType>
-    </column>
-    <column id="378" parent="345" name="DATE">
+    <column id="372" parent="344" name="DATE">
       <Position>2</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="379" parent="345" name="CUSTOMER_ID">
+    <column id="373" parent="344" name="CUSTOMER_ID">
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="380" parent="345" name="AMOUNT">
+    <column id="374" parent="344" name="AMOUNT">
       <Position>4</Position>
       <StoredType>decimal(10,2 digit)|0s</StoredType>
     </column>
-    <foreign-key id="381" parent="345" name="orders_ibfk_1">
+    <foreign-key id="375" parent="344" name="orders_ibfk_1">
       <ColNames>CUSTOMER_ID</ColNames>
       <RefColNames>id</RefColNames>
       <RefTableName>customers</RefTableName>
     </foreign-key>
-    <index id="382" parent="345" name="PRIMARY">
+    <index id="376" parent="344" name="PRIMARY">
       <ColNames>ID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="383" parent="345" name="CUSTOMER_ID">
+    <index id="377" parent="344" name="CUSTOMER_ID">
       <ColNames>CUSTOMER_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="384" parent="345" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="385" parent="346" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int(11)|0s</StoredType>
-    </column>
-    <column id="386" parent="346" name="salary">
-      <Position>2</Position>
-      <StoredType>decimal(18,2 digit)|0s</StoredType>
-    </column>
-    <column id="387" parent="347" name="id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int(11)|0s</StoredType>
-    </column>
-    <column id="388" parent="347" name="name">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>varchar(20)|0s</StoredType>
-    </column>
-    <column id="389" parent="347" name="age">
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StoredType>int(11)|0s</StoredType>
-    </column>
-    <column id="390" parent="347" name="address">
-      <Position>4</Position>
-      <StoredType>char(255)|0s</StoredType>
-    </column>
-    <column id="391" parent="347" name="salary">
-      <Position>5</Position>
-      <StoredType>decimal(18,2 digit)|0s</StoredType>
-    </column>
-    <index id="392" parent="347" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="393" parent="347" name="PRIMARY">
+    <key id="378" parent="344" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

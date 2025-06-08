@@ -92,8 +92,21 @@ INSERT INTO BUYERS (ID, NAME, AGE, ADDRESS, SALARY)
 SELECT * FROM CUSTOMERS;
 ```
 ```sql
+> 7 rows affected in 17 ms
+```
+```sql
 select * from buyers;
 ```
+| ID | NAME | AGE | ADDRESS | SALARY |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | Ramesh | 32 | Ahmedabad | 2000.00 |
+| 2 | Khilan | 25 | Delhi | 1500.00 |
+| 3 | Kaushik | 23 | Kota | 2000.00 |
+| 4 | Chaitali | 25 | Mumbai | 6500.00 |
+| 5 | Hardik | 27 | Bhopal | 8500.00 |
+| 6 | Komal | 22 | Hyderabad | 4500.00 |
+| 7 | Muffy | 24 | Indore | 10000.00 |
+
 
 #### 2) The INSERT... TABLE Statement
 If you have two tables structure exactly same, then instead of selecting specific columns you can insert the contents of one table into another using the INSERT...TABLE statement.
@@ -130,30 +143,6 @@ The SQL SELECT Statement is used to fetch the data from a database table which r
 SELECT column1, column2, columnN FROM table_name;
 
 SELECT * FROM table_name;
-```
-
-###### CUSTOMERS Table
-```sql
-CREATE TABLE CUSTOMERS (
-   ID INT NOT NULL,
-   NAME VARCHAR (20) NOT NULL,
-   AGE INT NOT NULL,
-   ADDRESS CHAR (25),
-   SALARY DECIMAL (18, 2),       
-   PRIMARY KEY (ID)
-);
-```
-
-###### Insert Records
-```sql
-INSERT INTO CUSTOMERS VALUES 
-(1, 'Ramesh', 32, 'Ahmedabad', 2000.00 ),
-(2, 'Khilan', 25, 'Delhi', 1500.00 ),
-(3, 'Kaushik', 23, 'Kota', 2000.00 ),
-(4, 'Chaitali', 25, 'Mumbai', 6500.00 ),
-(5, 'Hardik', 27, 'Bhopal', 8500.00 ),
-(6, 'Komal', 22, 'Hyderabad', 4500.00 ),
-(7, 'Muffy', 24, 'Indore', 10000.00 );
 ```
 
 If you want to fetch all the fields of the CUSTOMERS table, then you should use the query of SELECT statement with an Asterisk (*) instead of the column names, as shown below −
